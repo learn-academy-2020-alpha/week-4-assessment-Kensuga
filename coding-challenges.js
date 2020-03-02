@@ -8,15 +8,21 @@ var collections = ["purple", "blue", "green", "yellow", "pink"]
 // Expected output example3 (can be a different order): ["pink", "green"]
 
 function randomRemoval(arr) {
-    array = []
-    arr.shift()
-    while (arr.length > 0) {
-        r = Math.floor(Math.random()*arr.length)
-        array.push(arr[r])
-        arr.splice( r, 1)
+        if (arr.length > 1){
+        array = []
+        arr.shift()
+        while (arr.length > 0) {
+            r = Math.floor(Math.random()*arr.length)
+            array.push(arr[r])
+            arr.splice( r, 1)
+        }
+        return array
+    } else {
+        return "The array is empty"
     }
-    return array
 }
+console.log(collections = randomRemoval(collections));
+console.log(collections = randomRemoval(collections));
 console.log(collections = randomRemoval(collections));
 console.log(collections = randomRemoval(collections));
 console.log(collections = randomRemoval(collections));
